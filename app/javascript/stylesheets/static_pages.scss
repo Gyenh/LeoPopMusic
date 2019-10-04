@@ -1,0 +1,219 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  top: 0;
+}
+a {
+  outline : none;
+}
+
+.masterheader {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),url('../images/mpc.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform .2s; /* Animation */
+  // background-position: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .masterheader {
+  background-position: center;
+  background-size: cover;
+  }
+}
+
+.navbar {
+  min-height: unset;
+  background-color: unset
+}
+.navbar-item img {
+  max-height: unset;
+}
+@media screen and (max-width: 1023px) {
+  .navbar-menu  {
+    background-color: inherit;
+  }
+}
+
+html.has-navbar-fixed-top, body.has-navbar-fixed-top {
+  padding-top: unset;
+}
+
+.navbar.solid {
+  background-color: rgba(34, 47, 96, 0.555);
+  transition: background-color 1s ease 0s;
+}
+
+.landingtitle {
+  font-size: 10vmin;
+  line-height: 1;
+}
+
+.landingsubtitle {
+  font-size: 5vmin;
+  line-height: 1;
+}
+
+.masterheader:hover {
+  transform: scale(1);
+}
+
+.seemore {
+  background-color: unset;
+}
+
+.seemore:hover {
+  color: whitesmoke;
+}
+
+.seemore:before {
+  content: "";
+  position: absolute;
+  background: #222F60;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+.seemore:hover:before {
+  top: 0;
+}
+
+.back-top {
+    position:fixed;
+    bottom: 5vh;
+    right: 5vh;
+    display:none;
+    opacity:0.8;
+}
+
+
+// All the section below is for the mouse on the homepage
+
+$mouseHeight: 40px;
+$mouseWidth: 20px;
+
+$mouseColor: rgba(255, 255, 255, 1);
+$mouseWheelColor: $mouseColor;
+
+$hoverTransition: 0.2s ease-in-out;
+$mouseHoverColor: rgba(255, 255, 255, 0.4);
+$mouseWheelHoverColor: $mouseHoverColor;
+
+.mouse-container {
+  display: block;
+  text-align: center;
+
+  .mouse-outer {
+    position: relative;
+    display: inline-block;
+
+    height: $mouseHeight;
+    width: $mouseWidth;
+
+    border: 2px solid $mouseColor;
+    border-radius: $mouseHeight;
+
+    transition: border-color $hoverTransition;
+
+    .mouse-wheel {
+      $wheelWidth: #{ceil($mouseWidth / 6)};
+      $halfWheelWidth: #{$mouseWidth / 12};
+
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      margin-left: -$halfWheelWidth;
+
+      height: #{$mouseHeight / 4};
+      width: $wheelWidth;
+      background-color: $mouseWheelColor;
+
+      border-radius: $wheelWidth;
+
+      transition: background-color $hoverTransition;
+
+      -webkit-animation: scroll 1.4s infinite linear;
+      -moz-animation: scroll 1.4s infinite linear;
+      -o-animation: scroll 1.4s infinite linear;
+      animation: scroll 1.4s infinite linear;
+    }
+
+    &:hover {
+      border-color: $mouseHoverColor;
+
+      .mouse-wheel {
+        background-color: $mouseWheelHoverColor;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: scaleY(0.5) translateY(0);
+  }
+  20% {
+    transform: scaleY(1) translateY(#{$mouseHeight / 8});
+  }
+  60% {
+    transform: scaleY(0.5) translateY(15px);
+  }
+  to {
+    transform: scaleY(0.5) translateY(0);
+  }
+}
+
+@-o-keyframes scroll {
+  0% {
+    transform: scaleY(0.5) translateY(0);
+  }
+  20% {
+    transform: scaleY(1) translateY(#{$mouseHeight / 8});
+  }
+  60% {
+    transform: scaleY(0.5) translateY(15px);
+  }
+  to {
+    transform: scaleY(0.5) translateY(0);
+  }
+}
+
+@-moz-keyframes scroll {
+  0% {
+    transform: scaleY(0.5) translateY(0);
+  }
+  20% {
+    transform: scaleY(1) translateY(#{$mouseHeight / 8});
+  }
+  60% {
+    transform: scaleY(0.5) translateY(15px);
+  }
+  to {
+    transform: scaleY(0.5) translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: scaleY(0.5) translateY(0);
+  }
+  20% {
+    transform: scaleY(1) translateY(#{$mouseHeight / 8});
+  }
+  60% {
+    transform: scaleY(0.5) translateY(15px);
+  }
+  to {
+    transform: scaleY(0.5) translateY(0);
+  }
+}
+
+.titlesection2 {
+  padding: 10vh;
+}

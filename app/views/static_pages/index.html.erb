@@ -1,0 +1,98 @@
+<section id="page-1" class="hero is-fullheight masterheader">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title has-text-white landingtitle">
+        LEOPOP
+      </h1>
+      <h2 class="subtitle has-text-white landingsubtitle">
+        Cooking Something
+      </h2>
+      <%= link_to("Voir plus","#page-2", class: "button is-medium is-outlined seemore has-text-white")%>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container">
+      <div class="mouse-container animated lightSpeedIn">
+        <a class="js-scrollTo" href="#page-2">
+          <span class="mouse-outer">
+            <span class="mouse-wheel"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="page-2" class="hero is-fullheight">
+
+        <div class="title has-text-centered titlesection2">MES RESEAUX</div>
+
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered is-desktop has-text-centered">
+
+        <div class="column">
+          <div class="box">
+            <%= link_to "https://soundcloud.com/leopop", target: :_blank do %>
+              <i class="fab fa-soundcloud fa-5x"></i>
+            <% end %>
+            <p> Every month i introduce a new sounds meal to a dancer<br />
+                This one tastes them all, chooses one and makes a video on it<br />
+                I make out the Track here with FREE DOWNLOADS<br />
+
+                Enjoy Your Meal !
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="box">
+            <%= link_to "https://www.instagram.com/leopopmusic/", target: :_blank do %>
+              <i class="fab fa-instagram fa-5x"></i>
+            <% end %>
+            <p> Every month i introduce a new sounds meal to a dancer<br />
+                This one tastes them all, chooses one and makes a video on it<br />
+                I make out the Track here with FREE DOWNLOADS<br />
+
+                Enjoy Your Meal !
+            </p>
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="box">
+            <%= link_to "https://leopopmusic.bandcamp.com/releases", target: :_blank do %>
+              <i class="fab fa-bandcamp fa-5x"></i>
+            <% end %>
+            <p> Popping Beatape<br />
+            I will send 2 Bonus Tracks to everebody who will buy this Beatape<br />
+            It's 2 Remix for who i have no right<br />
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="box">
+            <%= link_to "https://www.youtube.com/channel/UChoVuGjdHpaHrCOuJ-uJsuQ", target: :_blank do %>
+              <i class="fab fa-youtube fa-5x"></i>
+            <% end %>
+            <p> Tous les mois je vais à la rencontre d'un danseur pour lui présenter mon Menu, Entrée, Plat et Dessert c'est à dire :<br /><br />
+                3 musiques de ma composition.<br />
+                Après "La Dégustation" celui-ci réalise "Le Service" une vidéo sur le gourmet ( la musique) choisit.<br />
+                Entre deux je vous présente "La Recette" et vous dévoile comment j'ai concocté et préparé ce qu'il à choisit.<br />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= link_to("#page-1", class:"back-top", title:"to the moon") do%>
+  <span class="fa-stack fa-1x">
+    <i class="far fa-circle fa-stack-2x"></i>
+    <i class="fas fa-arrow-up fa-stack-2x"></i>
+  </span>
+<% end %>

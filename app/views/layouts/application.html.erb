@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leopop</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload', turbolink_track: true %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://kit.fontawesome.com/079ee7e5a0.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class='has-navbar-fixed-top'>
+    <%= render "shared/navbar"%>
+    <%= yield %>
+  </body>
+</html>

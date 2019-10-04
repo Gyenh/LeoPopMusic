@@ -1,0 +1,21 @@
+<nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to image_pack_tag('logooo.png', size: "50x50"), root_path, class: "navbar-item" %>
+
+    <a role="button" class="navbar-burger burger has-text-white" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to "ACCUEIL", root_path, class: "navbar-item has-text-white" %>
+
+      <%#= link_to "Musiques", root_path, class: "navbar-item has-text-white" %>
+
+      <%#= link_to "Articles", root_path, class: "navbar-item has-text-white" %>
+    </div>
+  </div>
+</nav>
